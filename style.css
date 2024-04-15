@@ -83,6 +83,21 @@ header {
     color: #162938;
 }
 
+.search-box {
+    position: absolute;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .wrapper {
     position: relative;
     width: 400px;
@@ -155,6 +170,14 @@ header {
 }
 
 .form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+h3 {
+    position: relative;
+    top: -150px;
     font-size: 2em;
     color: #162938;
     text-align: center;

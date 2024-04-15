@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 首页，有登录和注册两个方向 
+            =====> 
+    login.php & register.php -->
 
 <head>
     <meta charset="UTF-8">
@@ -14,20 +17,14 @@
         <h2 class="logo">Shawn</h2>
         <nav class="navigation">
             <a href="index.html">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
+            <a href="myhome.html">My page</a>
+            <!-- <a href="#">Services</a> -->
             <a href="#">Contact</a>
-            <button class="btnLogin-popup" id="login-out">Login</button>
-            </nav>
+            <button class="btnLogin-popup">Login</button>
+            
         </nav>
 
     </header>
-
-    <span>
-        <?php
-            echo $ms;
-        ?>
-    </span>
 
 
     <div class="wrapper" id="wrapper">
@@ -39,7 +36,7 @@
             <form action="login.php" method="post">
                 <!-- 用户名 -->
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                     <input type="text" id="login-text" name="name" required>
                     <label>Name</label>
                 </div>
@@ -64,10 +61,10 @@
         <!-- 注册 -->
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="add.php" method="post">
+            <form action="register.php" method="post">
                 <!-- 用户名 -->
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
                     <input type="text" id="register-text" name="name" required>
                     <label>Name</label>
                 </div>
@@ -87,6 +84,12 @@
             </form>
         </div>
         
+        <span>
+            <?php
+                echo $ms;
+            ?>
+        </span>
+
     </div>
 
 

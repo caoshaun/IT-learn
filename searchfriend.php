@@ -1,8 +1,10 @@
 <?php
+//搜素好友。如果存在则显示添加按钮，指向addfriend.php
+
 session_start();
 
 
-$frend_tel=$_POST["frend_tel"];
+$frend_name=$_POST["frend_tel"];
 $_SESSION["to"]=$frend_tel;
 //var_dump($_SESSION);
 
@@ -16,15 +18,15 @@ if (mysqli_connect_errno()) {
 }
 
 //先看该用户是否存在
-$res=mysqli_query($link, "select tel from users where tel='$frend_tel'");
+$res=mysqli_query($link, "select name from users2 where name='$frend_name'");
 if ($res) {
     $ress=mysqli_fetch_assoc($res);
     if ($ress==NULL) {
-        echo "用户不存在";
+        $ms = "用户不存在";
     }else {
-        echo "<form action='addfrend.php' method='post'>";
-        echo "<input type='submit' value='加好友' name='addfrend'>";
-        echo "</form>";
+        $ms = "<form action='addfriend.php' method='post'>";
+        $ms = "<input type='submit' value='加好友' name='addfrend'>";
+        $ms = "</form>";
         //var_dump($_SESSION);
     }
 }
@@ -42,5 +44,5 @@ if(isset($_POST["frend"])){
 
 
 
-
+include('myhome.html');
 ?>

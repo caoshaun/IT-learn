@@ -1,4 +1,5 @@
 <?php
+//添加好友
 
 session_start();
 
@@ -24,7 +25,7 @@ if(isset($_POST["addfrend"])){
 }
  
 */
-include("frends.php");
+include("myhome.html");
 
 
 ?>

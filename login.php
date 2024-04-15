@@ -1,9 +1,22 @@
 <?php
+//登录页面，登录成功 => myhome.html
+//         登录失败 => 向index.html返回信息
+
 session_start();
 
 //接收数据
 $name=$_POST["name"];
 $password=$_POST["password"];
+
+//邮箱为空执行
+if ($email==''){
+    $ms = "请输入邮箱";
+    //echo "<a href='login.html'>返回</a>";
+}
+if ($password==''){
+    $ms = "请输入密码";
+    //echo "<a href='login.html'>返回</a>";
+}
 
 //连接
 $link = mysqli_connect('mysql636.db.sakura.ne.jp','shawn','csw-123456','shawn_db');
@@ -28,7 +41,7 @@ if ($res) {
 
 
 
-// include('index.html');
+include('index.html');
 
 
 

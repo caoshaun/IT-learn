@@ -1,4 +1,5 @@
 <?php
+//展示好友列表
 
 session_start();
 $wid=$_SESSION["id"];

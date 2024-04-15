@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 我的主页，可以退出登录；或者搜素好友 => searchfriend.php -->
+<!-- 展示好友 -->
 
 <html lang="en">
 
@@ -15,8 +15,8 @@
     <header>
         <h2 class="logo">Shawn</h2>
         <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="showfriends.html">Friends</a>
+            <a href="index.php">Home</a>
+            <a href="myhome.html">My page</a>
             <form action="index.php" method="post" style="margin: 0px;display: inline;">
                 <button class="btnLogin-popup" type="submit" name="logout">Logout</button>
             </form>
@@ -24,27 +24,19 @@
 
     </header>
 
+    <!-- 插入信息 -->
 
     <div class="search-box" id="search-box">
 
         <div class="form-box login">
-            <h2>Search friend</h2>
-            <form action="searchfriend.php" method="post">
-                <!-- 用户名 -->
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
-                    
-                    <input type="text" name="frend_tel" required>
-                    <label>Name</label>
-                </div><br>
-                
-                <!-- 插入信息 -->
-                <span>
-                    <?php
-                        echo $ms;
-                    ?>
-                </span>
-                <button type="submit" class="btn">Search</button>
+            <h3>Friends list</h3>
+            <span>
+                <?php
+                    echo $ms;
+                ?>
+            </span>
+            <form action="showfrends.php" method="post">
+                <button type="submit" class="btn">Show friends</button>
             </form>
         </div>
 
