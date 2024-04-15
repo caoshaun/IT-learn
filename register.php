@@ -24,7 +24,7 @@ if ($res) {
     }
 }
 
-
+include('index.html');
 
 
 
