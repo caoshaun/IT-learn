@@ -30,7 +30,7 @@ $res=mysqli_query($link, "select name from users2 where name='$name' AND passwor
 if ($res) {
     $ress=mysqli_fetch_assoc($res);
     if ($ress==NULL) {
-        $loginms = '电话或密码输入错误';
+        $loginms = '名字或密码输入错误';
     }else {
         header('Location: myhome.html');
         $_SESSION['id']=$name;

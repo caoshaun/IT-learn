@@ -18,9 +18,9 @@ if ($res) {
     $ress=mysqli_fetch_assoc($res);
     if ($ress==NULL) {
         $res=mysqli_query($link, "insert into users2 (name, password) values ('$name', '$password')");
-        $ms = '注册成功';
+        $loginms = '注册成功';
     }else {
-        $ms = '该电话已注册';
+        $loginms = '该名字已注册';
     }
 }
 
