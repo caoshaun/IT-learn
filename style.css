@@ -97,6 +97,12 @@ header {
     align-items: center;
     overflow: hidden;
 }
+.search-box h3 {
+    /* position: relative; */
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
 
 .wrapper {
     position: relative;
@@ -175,13 +181,6 @@ header {
     text-align: center;
 }
 
-h3 {
-    position: relative;
-    top: -150px;
-    font-size: 2em;
-    color: #162938;
-    text-align: center;
-}
 
 .input-box {
     position: relative;

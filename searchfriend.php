@@ -2,11 +2,12 @@
 //搜素好友。如果存在则显示添加按钮，指向addfriend.php
 
 session_start();
+// var_dump($_SESSION);
 
 
-$frend_name=$_POST["frend_tel"];
-$_SESSION["to"]=$frend_tel;
-//var_dump($_SESSION);
+$frend_name=$_POST["frend_name"];
+$_SESSION["to"]=$frend_name;
+// var_dump($_SESSION);
 
 
 //对数据库进行增删改查
@@ -24,10 +25,8 @@ if ($res) {
     if ($ress==NULL) {
         $ms = "用户不存在";
     }else {
-        $ms = "<form action='addfriend.php' method='post'>";
-        $ms = "<input type='submit' value='加好友' name='addfrend'>";
-        $ms = "</form>";
-        //var_dump($_SESSION);
+        $ms = "<br><form action='addfriend.php' method='post'><input type='submit' class='btn' value='加好友' name='addfrend'></form><br><br>";
+        // var_dump($_SESSION);
     }
 }
 

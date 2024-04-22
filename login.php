@@ -10,11 +10,11 @@ $password=$_POST["password"];
 
 //邮箱为空执行
 if ($email==''){
-    $ms = "请输入邮箱";
+    $loginms = "请输入邮箱";
     //echo "<a href='login.html'>返回</a>";
 }
 if ($password==''){
-    $ms = "请输入密码";
+    $loginms = "请输入密码";
     //echo "<a href='login.html'>返回</a>";
 }
 
@@ -30,7 +30,7 @@ $res=mysqli_query($link, "select name from users2 where name='$name' AND passwor
 if ($res) {
     $ress=mysqli_fetch_assoc($res);
     if ($ress==NULL) {
-        $ms = '电话或密码输入错误';
+        $loginms = '电话或密码输入错误';
     }else {
         header('Location: myhome.html');
         $_SESSION['id']=$name;

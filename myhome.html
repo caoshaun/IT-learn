@@ -15,7 +15,7 @@
     <header>
         <h2 class="logo">Shawn</h2>
         <nav class="navigation">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             <a href="showfriends.html">Friends</a>
             <form action="index.php" method="post" style="margin: 0px;display: inline;">
                 <button class="btnLogin-popup" type="submit" name="logout">Logout</button>
@@ -34,24 +34,29 @@
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
                     
-                    <input type="text" name="frend_tel" required>
+                    <input type="text" name="frend_name" required>
                     <label>Name</label>
-                </div><br>
+                </div>
                 
-                <!-- 插入信息 -->
-                <span>
-                    <?php
-                        echo $ms;
-                    ?>
-                </span>
                 <button type="submit" class="btn">Search</button>
             </form>
+            <!-- 插入信息 -->
+            <span>
+                <?php
+                    echo $ms;
+                ?>
+            </span>
         </div>
 
     </div>
     
     
-
+<!-- <script>
+    function addFriend(){
+        var x="<button class='btn'>Add friend</button>";
+        document.getElementById("addFriendButton").innerHTML=x;
+    }
+</script> -->
 
 
 

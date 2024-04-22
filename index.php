@@ -7,7 +7,7 @@ session_start();
 
 //检测登录状态
 if($_SESSION['login_status']==1){
-    $ms = '<a href="add.html">已登录</a>';
+    $ms = '<a href="myhome.html">已登录</a>';
 }
 
 //登出
