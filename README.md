@@ -1,1 +1,1 @@
-site: <https://shawn.sakura.ne.jp/tsao/home/index.html>
+site: <https://shawn.sakura.ne.jp/tsao/home/index.php>
