@@ -1,9 +1,11 @@
 <?php
 //添加好友
+require_once 'config.php';
 
 session_start();
 
-$link = mysqli_connect('mysql636.db.sakura.ne.jp','shawn','csw-123456','shawn_db');
+$link = mysqli_connect('$servername','$username','$password','$dbname');
+//$link = mysqli_connect('mysql636.db.sakura.ne.jp','shawn','csw-123456','shawn_db');
 
 //判断连接状况
 if (mysqli_connect_errno()) {
