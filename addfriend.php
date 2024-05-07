@@ -3,8 +3,8 @@
 
 session_start();
 
-require_once 'config.php';
-$link = mysqli_connect('$servername','$username','$password','$dbname');
+include 'config.php';
+$link = mysqli_connect(servername,username,password,dbname);
 //$link = mysqli_connect('mysql636.db.sakura.ne.jp','shawn','csw-123456','shawn_db');
 
 //判断连接状况
