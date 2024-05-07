@@ -11,7 +11,9 @@ $_SESSION["to"]=$frend_name;
 
 
 //对数据库进行增删改查
-$link = mysqli_connect('mysql636.db.sakura.ne.jp','shawn','csw-123456','shawn_db');
+require_once 'config.php';
+$link = mysqli_connect('$servername','$username','$password','$dbname');
+//$link = mysqli_connect('mysql636.db.sakura.ne.jp','shawn','csw-123456','shawn_db');
 
 //判断连接状况
 if (mysqli_connect_errno()) {
