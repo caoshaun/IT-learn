@@ -5,7 +5,7 @@
 $name=$_POST["name"];
 $password=$_POST["password"];
 
-require_once 'config.php';
+include 'config.php';
 $link = mysqli_connect('$servername','$username','$password','$dbname');
 //连接
 //$link = mysqli_connect('mysql636.db.sakura.ne.jp','shawn','csw-123456','shawn_db');
