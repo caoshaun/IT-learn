@@ -8,6 +8,8 @@ session_start();
 //检测登录状态
 if($_SESSION['login_status']==1){
     $ms = '<a href="myhome.html">已登录</a>';
+}else{
+    $ms = '<a href="myhome.html">未登录</a>';
 }
 
 //登出
